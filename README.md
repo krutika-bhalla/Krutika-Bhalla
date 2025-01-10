@@ -35,5 +35,6 @@ A Python program to classify packages as **STANDARD**, **SPECIAL**, or **REJECTE
   python sort_packages.py
 ```
 At the end type ```exit``` to exit
+
 For tests run ```python3 tests.py```
 
