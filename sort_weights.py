@@ -15,7 +15,7 @@ def sort(width=None, height=None, length=None, mass=None):
         raise ValueError("All four arguments (width, height, length, mass) must be provided.")
 
     try:
-        # Convert inputs to integers
+        # Inputs must be integers
         width = int(width)
         height = int(height)
         length = int(length)
@@ -23,10 +23,10 @@ def sort(width=None, height=None, length=None, mass=None):
     except ValueError:
         raise ValueError("All inputs must be integers.")
 
-    # Validate positive dimensions and mass
+    # Dimensions positive
     if width <= 0 or height <= 0 or length <= 0 or mass <= 0:
         raise ValueError("All dimensions and mass must be positive.")
-    # Calculate volume of package
+    # volume of package
     volume = width * height * length
 
     # Bulky package
@@ -35,7 +35,7 @@ def sort(width=None, height=None, length=None, mass=None):
     # Heavy package
     is_heavy = mass >= 20
 
-    # Determine category
+    # category
     if is_bulky and is_heavy:
         return "REJECTED"
     elif is_bulky or is_heavy:
@@ -43,7 +43,7 @@ def sort(width=None, height=None, length=None, mass=None):
     else:
         return "STANDARD"
 
-# Example usage of the sort function
+# Example input
 if __name__ == "__main__":
     while True:
         user_input = input("Enter width, height, length, and mass separated by spaces (or type 'exit' to quit): ")
